@@ -1,0 +1,435 @@
+/* 
+Here's the CSS for shanethiede.com. I'm Shane, by the way. I'm learning how to do visual design, step by step, and expand my portfolio for freelance work. I'm also a drummer and a songwriter, and like... a passionate lover or whatever.
+
+Author: Shane Thiede
+Authror URL: shane@shanethiede.com
+Tags: website, portfolio
+
+Table of contents:
+Section 1: General Styling
+Section #: Intro Section
+Section #: General Section Styling
+Section #: Specific Section Styling
+Section #: Link Styling
+Section #: Release Carousel
+*/
+
+
+/*** Section 1: Macro Styling ***/
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body{
+    color: #2A2A2A;
+}
+
+h3 {
+    font-size: 5px;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 998;
+    opacity: 0;
+    transition-delay: 0.5s;
+    transition: 0.5s;
+}
+
+/* display .overlay when it has the .active class */
+.overlay.active {
+    display: flex;
+    opacity: 1;
+}
+
+/*** Section 2: Header Styling ***/
+
+.header {
+    position: fixed;
+    top: 0;
+    padding-top: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 60px;
+    transition: all 0.5s;
+    font-family: 'Lato', sans-serif;
+    opacity: 1;
+    z-index: 5;
+}
+
+.header.hide {
+    opacity: 0 !important;
+}
+.navbar.hide {
+    opacity: 0 !important;
+}
+.header h4{
+    color: #2a2a2a;
+    font-size: 10px;
+}
+
+.navbar {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 80px;
+    transition: all 0.5s;
+    font-family: 'Lato', sans-serif;
+}
+
+.navbar button{
+    width: 80px;
+    height: 60px;
+    padding: 0;
+}
+
+.navbar ul{
+    font-size: 40px;
+}
+
+.navbar a{
+    color: #ffffff;
+}
+
+.logo {
+    height: 100%;
+    z-index: 5;
+}
+
+#logo-m {
+    width: 100px;
+    transition: 0.5s;
+    align-self: flex-start;
+}
+
+#logo-m.active {
+    opacity: 0.6;
+    transform: rotate(180deg) scale(0.75);
+}
+
+.header-nav{
+    padding-left: 20px;
+}
+
+.header-nav a{
+    color: #2A2A2A;
+    text-decoration: none;
+    transition: all 0.3s;
+    z-index: 5;
+}
+
+.header-nav a:hover{
+    color: #2A2A2A;
+    text-decoration: none;
+    opacity: 0.4;
+}
+
+.fade-in{
+    opacity: 1;
+}
+.grade{
+    
+    position: absolute;
+    top: -20px;
+    height: 80px;
+    width: 100vw;
+    z-index: 2;
+}
+
+/*** Section 3: Primary Styling ***/
+
+.full-page{
+    width: 100vw;
+    height: calc(100vh - 60px);
+    opacity: 0.1;
+    font-family: 'Lato', sans-serif;
+    text-align: left;
+    padding-left: 0;
+    padding-right: 0;
+    padding: 10px;
+}
+
+.full-page h1{
+    font-size: 120px;
+    transition: all 0.3s;
+}
+
+.full-page h2{
+    font-size: 120px;
+    color:#9f2a68;
+}
+
+.full-page a{
+    color: #2A2A2A;
+    font-size: 40px;
+    z-index: 5;
+    transition: all 0.3s;
+    
+}
+
+@media only screen and (max-width: 768px) {
+    .full-page h1{
+        font-size: 60px;
+    }
+
+    .full-page h2{
+        font-size: 60px;
+        color:#9f2a68;
+    }
+    
+    .full-page a{
+        font-size: 20px;
+    }
+    
+} 
+
+.full-page a:hover{
+    color: #2A2A2A;
+    text-decoration: none;
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+.carousel {
+    z-index: 1;
+    
+}
+
+#2 {
+    opacity: 0.2;
+}
+
+#cards-slider-wrapper {
+    position: relative;
+    transition: all 0.5s;
+    height: 600px;
+}
+
+.c-icon-l {
+    color: #2e2e2e;
+    font-size: 40px;
+    padding: 5px;
+    z-index: 20;
+}
+
+.c-icon-r {
+    color: #2e2e2e;
+    font-size: 40px;
+    padding: 5px;
+    z-index: 20;
+}
+
+.carouselTitle{
+    max-width: 300px;
+}
+
+.sidePic {
+    position: absolute;
+    height: 100vh;
+    width: auto;
+    opacity: 0.90;
+    left: 0px;
+    bottom: 0;
+    transition: all 0.3s;
+}
+
+@media only screen and (max-width: 1056px) {
+    .sidePic {
+        height: 55vh;
+        left: -100px;
+    }
+
+}
+
+/*** Section 3: Music Page Styling ***/
+
+.music h1{
+    text-align: center;
+}
+
+.music h2{
+    font-size: 40px;
+    text-align: center;
+}
+.music img {
+    width:300px;
+    border-radius: 8px;
+}
+
+.music a{
+    width: 260px;
+    height: 60px;
+    color: #2a2a2a;
+    font-size: 30px;
+    border: none;
+    transition: all 0.3s;
+}
+
+.music a:hover{
+    opacity: 0.5 !important;
+}
+
+.music span{
+    font-size: 18px;
+}
+
+
+.sideBG {
+    width: 300px;
+    height: 300px;
+    background-color: #2a2a2a;
+    border-radius: 8px;
+}
+
+/*** Section Q: Gallery Page Styling ***/
+
+.gallery {
+    height: auto;
+    text-align: center;
+}
+
+.photoBlock {
+    height: 100%;
+    opacity: 1;
+    transition: all 0.3s;
+}
+
+.photoBlock:hover {
+    opacity: 0.5;
+}
+
+.exitButton {
+    color: #fff;
+    font-size: 30px;
+    z-index: 1000;
+    position: fixed;
+    top: 50px;
+    left: calc(100vw - 50px);
+}
+
+.modalPic {
+    display: none;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.modalPic.active {
+    display: block;
+    opacity: 1;
+}
+
+.modalPic img{
+    position: fixed;
+    top: 100px;
+    
+    max-width: 80vw;
+    max-height: 80vh;
+    z-index: 999;
+}
+
+.yt {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+}
+.vid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/*** Setion P: About page styling ***/
+.about h1{
+    text-align: center;
+    font-size: 100px;
+}
+
+.about span{
+    color: #9f2a68;
+}
+
+.paraCol{
+    width: 400px;
+    text-align: justify;
+}
+
+@media only screen and (max-width: 436px) {
+    .paraCol {
+        width: 300px;
+    }
+    
+} 
+
+/*** Section X: Contact Page Styling ***/
+
+.contact{
+    height: 100%;
+}
+
+.contact h1{
+    text-align: center;
+}
+
+.contact h4{
+    font-size: 15px;
+    text-align: center;
+}
+
+.contact ul {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+
+.contact a {
+    color: #9F2A68;
+    font-size: 70px;
+    transition: all 0.5s;
+}
+
+.contact a:hover {
+    color: #9F2A68;
+}
+
+@media only screen and (max-width: 768px) {
+    .contact a{
+        font-size: 40px;
+    }
+    
+} 
+
+/*** Section Y: Links Page Styling ***/
+.links h1{
+    text-align: center;
+}
+
+.links a{
+    color: #9f2a68;
+    font-size: 30px;
+}
+
+.links a:hover{
+    color: #ffffff;
+}
+
+.btn-outline-primary {
+    border-color: #9f2a68;
+    color: #9f2a68;
+}
+
+.btn-outline-primary:hover {
+    border-color: #9f2a68;
+    background-color: #9f2a68;
+    opacity: 1 !important;
+}

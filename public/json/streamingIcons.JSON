@@ -1,0 +1,12 @@
+{
+    "spotify": {
+        "icon": "fab fa-spotify",
+        "color": "#fafafa"
+    },
+    "appleMusic": {
+        "icon": "fab fa-itunes",
+        "color": "#aaaaaa",
+    },
+    
+    
+}
