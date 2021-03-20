@@ -1,7 +1,7 @@
 {
     "All of This (Expanded Edition)": {
         "title":"All of This (Expanded Edition)",
-        "pic": "./png/All of This - Cover Final.png",
+        "pic": "/png/All of This - Cover Final.png",
         "links":{
             "spotify": {
                 "text": "Listen",
@@ -32,7 +32,7 @@
     },
     "Setup": {
         "title":"Setup",
-        "pic":"./png/C-fs-cover-25x.png",
+        "pic":"/png/C-fs-cover-25x.png",
         "links":{
             "spotify": {
                 "text": "Listen",

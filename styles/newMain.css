@@ -31,7 +31,10 @@ body{
     flex-direction: row;
     justify-content: center;
     align-items: center;
+}
 
+.row.between{
+    justify-content: space-between;
 }
 
 .col{
@@ -41,6 +44,10 @@ body{
     align-items: center;
     height: 100%;
     width: 100%;
+}
+
+.col.top{
+    justify-content: flex-start;
 }
 
 .overlay {
@@ -178,10 +185,6 @@ span{
     padding: 10px;
 }
 
-.full-page .top{
-    align-items: flex-start;
-}
-
 .full-page h1{
     font-size: 120px;
     transition: all 0.3s;
@@ -277,7 +280,7 @@ span{
 
 }
 
-/*** Release Carousel Styling ***/
+/*** Release Carousel / music page Styling ***/
 
 .carousel{
     position: relative;
@@ -302,36 +305,43 @@ span{
     transition: all 0.2s;
 }
 
-.car-card{
-    position: absolute;
+.card-wrapper{
+    height: 600px;
+    width: 300px;
+    position: relative;
     transform-origin: center;
 }
 
+.card-title{
+    font-size: auto;
+    text-align: center;
+}
+
+.car-card{
+    position: absolute;
+    transform-origin: center;
+    left: 0;
+    top: 0px;
+}
+
 .car-card-enter{
-    left: -100%;
+    opacity: 0;
 }
 .car-card-enter-active{
-    left: 0;
-    transition: all 0.3s ease-in-out;
+    opacity: 1;
+    transition: all .3s ease-in-out;
 }
 
 .car-card-exit{
-    left: 0;
+    opacity: 1;
 }
 .car-card-exit-active{
-    left: 100%;
-    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    transition: all .3s ease-in-out;
 }
 /*** Section 3: Music Page Styling ***/
 
-.music h1{
-    text-align: center;
-}
 
-.music h2{
-    font-size: 40px;
-    text-align: center;
-}
 .music img {
     width:300px;
     border-radius: 8px;

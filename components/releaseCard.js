@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faSpotify, faBandcamp, faYoutube, faItunes} from '@fortawesome/free-brands-svg-icons'
 import { prominent } from 'color.js'
+import Image from 'next/image'
 
 
 
@@ -10,7 +11,7 @@ function ReleaseCard(props) {
   const links = Object.keys(props.links).map(i =>{
     const iconName = props.links[i]['icon'];
     return(
-      <div className="row card-link">
+      <div key={props.links[i]} className="row card-link">
         
         <a href={props.links[i]['link']}
            style={{"backgroundColor":props.links[i]['color']}}
@@ -26,9 +27,9 @@ function ReleaseCard(props) {
 
     return (        
       <div className="car-card">
-        <h2 className="carouselTitle">{props.title}</h2>
+        <h3 className="card-title"><span>{props.title}</span></h3>
         <div className="col">
-          <img src={props.pic} alt="Shane Thiede" style={{width: 300}}/>
+          <Image src={props.pic} width={300} height={300}/>
           <div className="col sideBG">
               {links}
           </div>

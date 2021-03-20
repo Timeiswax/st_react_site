@@ -32,7 +32,7 @@ class Home extends Component {
     })
     var subscript = <h2 id="subscript" key={this.state.word} className="fp-title fp-title-sub">{this.state.word}</h2>
     return (
-      <div id="intro" class="full-page">
+      <div id="intro" class="full-page index-page">
       {/* <img src="jpg/front-page/Music.jpg" class="sidePic" alt="Coffee is important" /> */}
       <div className="col">
         <div className="row">
