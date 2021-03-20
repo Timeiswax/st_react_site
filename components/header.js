@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import Image from 'next/image'
-import Link from 'next/link'
 
 class Header extends Component {
   constructor(props) {
@@ -12,23 +10,23 @@ class Header extends Component {
   render() {
         return (
             <div>
-                <nav className="row between header" id="header">
+                <nav className="d-none d-md-flex flex-row align-items-center header" id="header">
                     
                     <div className = "d-flex flex-column">
-                        <Image src="/svg/header-gradient.svg" layout='fill' />
+                        <img src="svg/header-gradient.svg" alt="head-grade" className="grade"></img>
                     </div>
                     <img id="logo" className="logo" src="svg/Dots_Icon.svg" alt="Shane Thiede Dot Logo" />
                     <div id="header-nav" className="d-flex flex-row justify-content-start header-nav">
-                        <Link href="about" className="header-link">About</Link>
-                        <Link href="music" className="header-link">Music</Link>
-                        <Link href="index" className="header-link">Home</Link>
-                        <Link href="gallery" className="header-link">Gallery</Link>
-                        <Link href="links" className="header-link">Links</Link>
-                        <Link href="contact"className="header-link">Contact</Link>   
+                        <a href="index.html" className="p-2">Home</a>
+                        <a href="music.html" className="p-2">Music</a>
+                        <a href="about.html" className="p-2">About</a>
+                        <a href="gallery.html" className="p-2">Gallery</a>
+                        <a href="links.html" className="p-2">Links</a>
+                        <a href="contact.html" className="p-2">Contact</a>   
                     </div>
                 </nav>
             
-                {/* <nav className="d-block d-md-none navbar">
+                <nav className="d-block d-md-none navbar">
                     <button id="navButton" className="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbar"
                     aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"><span>
                         <img id="logo-m" className="img-fluid" src="svg/Dots_Icon.svg" alt="Shane Thiede Dot Logo" /></span>
@@ -59,8 +57,8 @@ class Header extends Component {
 
                 </nav>
 
-                <div className="overlay"></div> */}
-            </div> 
+                <div className="overlay"></div>
+            </div>
         );
     }
 

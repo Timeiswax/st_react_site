@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import ReleaseCarousel from '../components/releaseCarousel'
-import Header from '../components/header'
 
 class Music extends Component {
     constructor(props) {
@@ -9,15 +8,13 @@ class Music extends Component {
     }
     render() { 
         return ( 
-            <div>
-                <Header />
-                <div className="full-page music">    
-                    <div className="col top">
-                        <h1 style={{marginTop:"20px"}}>Music</h1>
-                        <ReleaseCarousel />
-                        <div style={{padding:"60px"}} />
-                    </div>
-                </div>    
+            <div className="full-page top music">    
+                <div className="col">
+                    <h1>Music</h1>
+                    <ReleaseCarousel />
+                    <div style={{padding:"60px"}} />
+                </div>
+                
             </div> 
     );
     }
