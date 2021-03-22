@@ -32,7 +32,15 @@ body{
     flex-direction: row;
     justify-content: center;
     align-items: center;
+}
 
+.wrap-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    justify-content: space-around;
 }
 
 .col{
@@ -282,6 +290,54 @@ span{
     font-size: 20px;
 }
 
+/*** Album Page Styling ***/
+
+.album-page .col{
+    width: 400px;
+    justify-content: flex-start;
+}
+
+.album-box-1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: auto;
+    background-color: #fcfcfc;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px #2a2a2a;
+    padding-bottom: 10px;
+}
+.sub-box{
+    width: 98%;
+}
+
+.album-page h1{
+    height: auto;
+    font-size: 20px;
+    margin: 10px ;
+    text-align: center;
+}
+
+.album-page img{
+    width: 400px;
+    height: 400px;
+    margin-bottom: 10px;
+}
+
+.album-page .link-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    min-width: 150px;
+    box-shadow: 0 2px 5px #2a2a2a;
+    margin: 3px;
+    padding: 3px;
+    height: auto;
+}
+
 
 /*** Section Q: Gallery Page Styling ***/
 
@@ -346,7 +402,6 @@ span{
     text-align: center;
     font-size: 100px;
 }
-
 
 
 .paraCol{
