@@ -20,6 +20,7 @@ Section #: Release Carousel
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 body{
@@ -74,97 +75,20 @@ span{
     padding-top: 15px;
     padding-left: 30px;
     padding-right: 30px;
+    margin-bottom: 30px;
     height: 60px;
     transition: all 0.5s;
     font-family: 'Lato', sans-serif;
-    opacity: 1;
-    z-index: 5;
 }
 
-.header.hide {
-    opacity: 0 !important;
-}
-.navbar.hide {
-    opacity: 0 !important;
-}
-.header h4{
-    color: #2a2a2a;
-    font-size: 10px;
-}
 
-.navbar {
-    position: fixed;
-    z-index: 999;
-    top: 0;
-    padding-left: 15px;
-    padding-right: 15px;
-    height: 80px;
-    transition: all 0.5s;
-    font-family: 'Lato', sans-serif;
-}
-
-.navbar button{
-    width: 80px;
-    height: 60px;
-    padding: 0;
-}
-
-.navbar ul{
-    font-size: 40px;
-}
-
-.navbar a{
-    color: #ffffff;
-}
-
-.logo {
-    height: 100%;
-    z-index: 5;
-}
-
-#logo-m {
-    width: 100px;
-    transition: 0.5s;
-    align-self: flex-start;
-}
-
-#logo-m.active {
-    opacity: 0.6;
-    transform: rotate(180deg) scale(0.75);
-}
-
-.header-nav{
-    padding-left: 20px;
-}
-
-.header-nav a{
-    color: #2A2A2A;
-    text-decoration: none;
-    transition: all 0.3s;
-    z-index: 5;
-}
-
-.header-nav a:hover{
-    color: #2A2A2A;
-    text-decoration: none;
-    opacity: 0.4;
-}
-
-.fade-in{
-    opacity: 1;
-}
-.grade{
-    
-    position: absolute;
-    top: -20px;
-    height: 80px;
-    width: 100vw;
-    z-index: 2;
-}
 
 /*** Section 3: Primary Styling ***/
 
 .full-page{
+    /* position: absolute;
+    left: 0;
+    top:60px; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -173,9 +97,8 @@ span{
     opacity: 1;
     font-family: 'Lato', sans-serif;
     text-align: left;
-    padding-left: 0;
-    padding-right: 0;
     padding: 10px;
+    overflow: hidden;
 }
 
 .full-page .top{
@@ -184,6 +107,7 @@ span{
 
 .full-page h1{
     font-size: 120px;
+    margin: 0;
     transition: all 0.3s;
 }
 
@@ -229,23 +153,7 @@ span{
 }
 
 
-.fullPageTransition-enter{
-    opacity: 0;
-}
 
-.fullPageTransition-enter-active{
-    opacity: 1;
-    transition: all 0.2s;
-}
-
-.fullPageTransition-exit{
-    opacity: 1;
-}
-
-.fullPageTransition-exit-active{
-    opacity: 0;
-    transition: all 0.2s;
-}
 
 /*** Front Page Styling ***/
 .fp-links{
@@ -256,26 +164,27 @@ span{
     margin: 0;
     text-align: center;
 }
+.fp-title-sub-wrapper {
+    position: relative;
+}
+
+.fp-title-sub-ph{
+    margin: 0;
+    text-align: center;
+    z-index:-10;
+    opacity: 0;
+    /* position: absolute; */
+    /* margin-top: 1em; */
+}
 
 .fp-title-sub{
+    margin: 0;
+    width: 100%;
+    text-align: center;
     position: absolute;
+    top: 0;
 }
-.fp-title-enter{
-    opacity: 0;
-}
-.fp-title-enter-active{
-    opacity: 1;
-    transition: all 0.3s;
-}
-.fp-title-exit{
-    opacity: .25;
-}
-.fp-title-exit-active{
-    opacity: 0;
-    z-index: -10;
-    transition: all 0.2s;
 
-}
 
 /*** Release Carousel Styling ***/
 
@@ -283,12 +192,8 @@ span{
     position: relative;
 }
 
-.carouselTitle{
-    max-width: 300px;
-}
-
-.carButton{
-    font-size: 200;
+.car-button{
+    font-size: 50px;
     width: 50px;
     height: 50px;
     display: flex;
@@ -296,78 +201,87 @@ span{
     justify-content: center;
     opacity: 1;
 }
-.carButton:hover{
+.car-button:hover{
     cursor: pointer;
     opacity: 0.25;
     transition: all 0.2s;
 }
+.car-card-wrapper{
+    position: relative;
+    display: block;
+    width: 300px;
+    height: 500px;
+}
 
 .car-card{
     position: absolute;
-    transform-origin: center;
+    box-shadow: 0px 5px 15px black;
+    border-radius: 8px;
 }
 
-.car-card-enter{
-    left: -100%;
-}
-.car-card-enter-active{
-    left: 0;
-    transition: all 0.3s ease-in-out;
+.car-card-title{
+    max-width: 300px;
 }
 
-.car-card-exit{
-    left: 0;
-}
-.car-card-exit-active{
-    left: 100%;
-    transition: all 0.3s ease-in-out;
-}
-/*** Section 3: Music Page Styling ***/
 
-.music h1{
-    text-align: center;
+.card-side-bg {
+    width: 300px;
+    height: 80px;
+    /* background-color: #d3d3d3; */
+    border-radius: 8px;
 }
 
-.music h2{
+
+
+.car-card h2{
     font-size: 40px;
     text-align: center;
 }
-.music img {
-    width:300px;
+
+.car-card img {
+    width: 300px;
     border-radius: 8px;
     box-shadow: 0 3px 10px #2a2a2a;
     z-index: 2;
 }
 
-.music a{
+.car-card img:hover {
+    opacity: 0.5;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.car-card a{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 260px;
+    width: 60px;
     height: 60px;
-    font-size: 20px;
+    font-size: 30px;
     border-radius: 10px;    
     margin: 5px;
     transition: all 0.3s;
-    box-shadow: 0 3px 10px #2a2a2a;
+    box-shadow: 0 2px 8px #2a2a2a;
     
 }
 
-.music a:hover{
+.car-card a:hover{
     opacity: 0.5 !important;
 }
 
-.music span{
+.car-card span{
     font-size: 18px;
 }
 
-
-.sideBG {
-    width: 300px;
-    height: 300px;
-    background-color: #d3d3d3;
-    border-radius: 8px;
+.music h1{
+    text-align: center;
+    font-size: 60px;
 }
+
+.music h3{
+    text-align: center;
+    font-size: 20px;
+}
+
 
 /*** Section Q: Gallery Page Styling ***/
 
@@ -502,4 +416,76 @@ span{
     border-color: #9f2a68;
     background-color: #9f2a68;
     opacity: 1 !important;
+}
+
+/** Transition syles **/
+.fullPageTransition-enter{
+    opacity: 0;
+}
+
+.fullPageTransition-enter-active{
+    opacity: 1;
+    transition: all 0.2s;
+}
+
+.fullPageTransition-exit{
+    opacity: 1;
+}
+
+.fullPageTransition-exit-active{
+    opacity: 0;
+    transition: all 0.2s;
+}
+
+.fp-title-enter{
+    opacity: 0;
+}
+.fp-title-enter-active{
+    opacity: 1;
+    transition: all 0.3s;
+}
+.fp-title-exit{
+    opacity: .25;
+}
+.fp-title-exit-active{
+    opacity: 0;
+    z-index: -10;
+    transition: all 0.2s;
+}
+
+.car-card-enter{
+    left: -400%;
+    opacity: 0;
+}
+.car-card-enter-active{
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+}
+
+.car-card-exit{
+    left: 0;
+    opacity: 1;
+}
+.car-card-exit-active{
+    left: 400%;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.op-swap-enter{
+    opacity: 0;
+}
+.op-swap-enter-active{
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+.op-swap-exit{
+    opacity: 1;
+
+}
+.op-swap-exit-active{
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
 }

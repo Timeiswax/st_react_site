@@ -11,6 +11,14 @@ const cards = Object.keys(releaseCarousel).map(i => {
   )
 })
 
+const subs =Object.keys(releaseCarousel).map(i => {
+  return(
+    <span key={releaseCarousel[i]['title']}>{releaseCarousel[i]['title']}</span>
+  )
+})
+
+const length = cards.length;
+
 class ReleaseCarousel extends Component {
 
   constructor(props){
@@ -25,14 +33,14 @@ class ReleaseCarousel extends Component {
   indexMinus() {
     const j = this.state.index;
     this.setState({
-      index: j-1
+      index: Math.abs(j-1)%length
     })
   }
  
   indexPlus() {
     const j = this.state.index;
     this.setState({
-      index: j+1
+      index: Math.abs(j+1)%length
     })
   }
   
@@ -42,26 +50,29 @@ class ReleaseCarousel extends Component {
       <div className="carousel">
         <div className="col">
           <div className="row">
-            <div className="carButton" onClick={this.indexMinus}>
+            <div className="car-button" onClick={this.indexMinus} style={{marginRight:"20px"}}>
               <FontAwesomeIcon icon={faChevronLeft}/>
             </div>
-            <TransitionGroup>
-              <CSSTransition
-              in={true}
-              key={this.state.index}
-              timeout={1000}
-              classNames={"car-card"}
-                >
-                <div>
+              <div className="car-card-wrapper">
+              <TransitionGroup>
+                <CSSTransition
+                in={true}
+                key={this.state.index}
+                timeout={1000}
+                classNames={"car-card"}
+                  >
                     {cards[this.state.index]}
-                </div>
-              </CSSTransition>
-            </TransitionGroup>
-            <div className="carButton" onClick={this.indexPlus}>
+                </CSSTransition>
+              </TransitionGroup>
+            </div>
+            <div className="car-button" onClick={this.indexPlus} style={{marginLeft:"20px"}}>
               <FontAwesomeIcon icon={faChevronRight} />
             </div>
-            </div>
           </div>
+          {/* <div className="row" style={{marginTop:"20px"}}>
+            {subs}
+          </div> */}
+        </div>
       </div>
     );
   }

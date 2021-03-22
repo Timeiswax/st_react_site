@@ -1,29 +1,29 @@
 {
     "All of This (Expanded Edition)": {
         "title":"All of This (Expanded Edition)",
-        "pic": "./png/All of This - Cover Final.png",
+        "pic": "/png/All of This - Cover Final.png",
         "links":{
             "spotify": {
-                "text": "Listen",
+                "text": "Listen on Spotify",
                 "link":"https://open.spotify.com/artist/7ILs68f7qcIdKQ3f4XztaE?si=wBHAbzQzRAqYeOaZ7Ana1A",
                 "icon":"faSpotify",
                 "color": "#1DB954"
             },
             "youtube": {
-                "text": "Listen",
+                "text": "Watch on YouTube",
                 "link": "https://www.youtube.com/watch?v=6UtDZDMZmAU&list=PLwARD8Cp8LTbhWzNRl99g0jER8xeeMdXZ",
                 "icon": "faYoutube",
                 "color": "#FF0000"
             },
             "appleMusic": {
-                "text": "Listen",
+                "text": "Listen on Apple Music",
                 "link": "https://music.apple.com/us/artist/shane-thiede-trio/1470374614",
                 "icon": "faItunes",
                 "color": "#ffffff"
             },
             
             "bandcamp": {
-                "text": "Buy",
+                "text": "Buy on Bandcamp",
                 "link": "https://shanethiede.bandcamp.com/album/all-of-this",
                 "icon": "faBandcamp",
                 "color": "#ffffff"
@@ -32,29 +32,29 @@
     },
     "Setup": {
         "title":"Setup",
-        "pic":"./png/C-fs-cover-25x.png",
+        "pic":"/png/C-fs-cover-25x.png",
         "links":{
             "spotify": {
-                "text": "Listen",
+                "text": "Listen on Spotify",
                 "link":"https://open.spotify.com/artist/7ILs68f7qcIdKQ3f4XztaE?si=wBHAbzQzRAqYeOaZ7Ana1A",
                 "icon":"faSpotify",
                 "color": "#1DB954"
             },
             "youtube": {
-                "text": "Listen",
+                "text": "Watch on YouTube",
                 "link": "https://www.youtube.com/watch?v=6UtDZDMZmAU&list=PLwARD8Cp8LTbhWzNRl99g0jER8xeeMdXZ",
                 "icon": "faYoutube",
                 "color": "#FF0000"
             },
             "appleMusic": {
-                "text": "Listen",
+                "text": "Listen on Apple Music",
                 "link": "https://music.apple.com/us/artist/shane-thiede-trio/1470374614",
                 "icon": "faItunes",
                 "color": "#ffffff"
             },
             
             "bandcamp": {
-                "text": "Buy",
+                "text": "Buy on Bandcamp",
                 "link": "https://shanethiede.bandcamp.com/album/all-of-this",
                 "icon": "faBandcamp",
                 "color": "#ffffff"

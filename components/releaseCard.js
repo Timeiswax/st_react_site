@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faSpotify, faBandcamp, faYoutube, faItunes} from '@fortawesome/free-brands-svg-icons'
 import { prominent } from 'color.js'
-
+import Link from 'next/link'
 
 
 function ReleaseCard(props) {
@@ -10,28 +10,33 @@ function ReleaseCard(props) {
   const links = Object.keys(props.links).map(i =>{
     const iconName = props.links[i]['icon'];
     return(
-      <div className="row card-link">
-        
-        <a href={props.links[i]['link']}
-           style={{"backgroundColor":props.links[i]['color']}}
+        <a href={props.links[i]['link']} 
+        style={{"backgroundColor":props.links[i]['color']}}
+        onMouseOver={()=>setCta(props.links[i].text)}
         >
           <FontAwesomeIcon icon={iconRef[iconName]}></FontAwesomeIcon>
-          <div style={{width:"10px"}} />
-          {props.links[i]['text']}
         </a>
-      </div>
     )
   })
-  prominent(props.pic).then(colors => console.log(colors))
+
+  const [cta, setCta] = useState('Listen on Spotify')
 
     return (        
       <div className="car-card">
-        <h2 className="carouselTitle">{props.title}</h2>
         <div className="col">
-          <img src={props.pic} alt="Shane Thiede" style={{width: 300}}/>
-          <div className="col sideBG">
+          <div className="card-thang">
+            <h3 className="car-card-title">{props.title}</h3>
+            <Link href={`/music/${props.title}`} passHref={true}>
+              <img src={props.pic} alt="Shane Thiede" />
+            </Link>
+          </div>
+          <div className="row card-side-bg">
               {links}
           </div>
+          <div>
+              <h4 style={{marginTop:"10px"}}>{cta}</h4>
+          </div>
+          
         </div>
     </div>  
   );
