@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import releaseCarousel from '../public/json/releaseCarousel'
+import releaseCarousel from '../public/json/releaseCarouselData'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faChevronLeft, faChevronRight} from '@fortawesome/free-solid-svg-icons'
 import ReleaseCard from './releaseCard'
