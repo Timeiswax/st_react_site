@@ -4,6 +4,7 @@ import Header from '../../components/header';
 import releaseCarousel from '../../public/json/releaseCarousel'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faSpotify, faBandcamp, faYoutube, faItunes} from '@fortawesome/free-brands-svg-icons'
+import PlayWidget from 'react-spotify-widgets'
 
 const fullAlbumPage = (props) => {
     const router = useRouter()
@@ -18,12 +19,13 @@ const fullAlbumPage = (props) => {
             const sc = dataArr[item];
             var title = sc.title
             var pic = sc.pic;
-            var spotify = sc.links['spotify'].link
+            var spotify = sc.links['spotify'].uri
             console.log(spotify)
             var links = Object.keys(sc.links).map(i =>{
                 const iconName = sc.links[i]['icon'];
                   return(
                       <a
+                      key={sc.links[i]['link']} 
                       className="link-icon" 
                       href={sc.links[i]['link']} 
                       style={{
@@ -32,16 +34,18 @@ const fullAlbumPage = (props) => {
                       >
                         <FontAwesomeIcon icon={iconRef[iconName]}></FontAwesomeIcon>
                       </a>
-                  )
+                    )
                 })
-
         }
     }
+    console.log(pic)
+    // let v = new Vibrant(pic)
+    // v.getPalette((err, palette) => console.log(palette))
 
     return (
         <div>
-            <Header />
-            <div className="full-page album-page">
+            {/* <Header /> */}
+            <div className="album-page">
                 <div className="col">
                     <div className="album-box-1">
                         <h1>{title}</h1>
@@ -51,8 +55,12 @@ const fullAlbumPage = (props) => {
                         </div>
                     </div>
                     <div className="album-box-2">
-                        {/* {spotify} */}
-                    <iframe src={spotify} width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                        <PlayWidget
+                            width={380}
+                            height={250}
+                            uri={spotify}
+                            lightTheme={false}
+                        />
                     </div>
                 </div>
             </div>

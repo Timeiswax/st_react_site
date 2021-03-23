@@ -10,10 +10,8 @@ class About extends Component {
     render() { 
         return (
             <div>
-                <div style={{"height":"60px"}}><img src="svg/header-gradient.svg" alt="head-grade"></img></div>
-                    {/* <Header /> */}
-                    <div className="full-page">
-                    
+                {/* <Header /> */}
+                <div className="full-page">
                     <div className="col paraCol">
                 
                         <h1>About</h1>
