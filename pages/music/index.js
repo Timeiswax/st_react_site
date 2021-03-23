@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ReleaseCarousel from '../../components/releaseCarousel'
+import ReleaseCarousel from '../../components/releasecarousel'
 import Header from '../../components/header'
 
 class Music extends Component {
