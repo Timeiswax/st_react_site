@@ -65,8 +65,9 @@ body{
 }
 
 span{
-    color: #9f2a68;
+    color: #fdad15;
 }
+
 
 /* display .overlay when it has the .active class */
 .overlay.active {
@@ -319,7 +320,7 @@ span{
 
 .album-page{
     position: relative;
-    top: 60px;
+    top: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -380,6 +381,7 @@ span{
     align-items: center;
     justify-content: center;
     margin-top: 20px;
+    margin-bottom: 40px;
     height: 300px;
     width: 400px;
     border-radius: 8px;
@@ -412,6 +414,14 @@ span{
     height: auto;
 }
 
+.album-cta{
+    margin: 5px;
+    padding-left: 40px;
+    font-size: 20px;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px;
+}
 
 /*** Section Q: Gallery Page Styling ***/
 

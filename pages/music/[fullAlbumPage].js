@@ -5,6 +5,7 @@ import releaseCarousel from '../../public/json/releaseCarousel'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faSpotify, faBandcamp, faYoutube, faItunes} from '@fortawesome/free-brands-svg-icons'
 import PlayWidget from 'react-spotify-widgets'
+import Head from 'next/head'
 
 const fullAlbumPage = (props) => {
     const router = useRouter()
@@ -44,12 +45,19 @@ const fullAlbumPage = (props) => {
 
     return (
         <div>
+            <Head>
+                <title>Listen to {title}</title>
+                
+                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+            </Head>
             {/* <Header /> */}
             <div className="album-page">
                 <div className="col">
+                    <h1>Stream Music from Shane Thiede</h1>
                     <div className="album-box-1">
                         <h1>{title}</h1>
                         <img src={pic}></img>
+                        <h4 className="album-cta">Listen:</h4>
                         <div className="sub-box wrap-row">
                             {links}
                         </div>
