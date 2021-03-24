@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
-import releaseCarousel from '../public/json/releaseCarouselData'
+import releaseCarouselData from '../public/json/releaseCarouselData'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faChevronLeft, faChevronRight} from '@fortawesome/free-solid-svg-icons'
 import ReleaseCard from './releaseCard'
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
-const cards = Object.keys(releaseCarousel).map(i => {
+const cards = Object.keys(releaseCarouselData).map(i => {
   return(
-    <ReleaseCard key={releaseCarousel[i]['title']} pic={releaseCarousel[i]['pic']} title ={releaseCarousel[i]['title']} links={releaseCarousel[i]['links']} />
+    <ReleaseCard key={releaseCarouselData[i]['title']} pic={releaseCarouselData[i]['pic']} title ={releaseCarouselData[i]['title']} links={releaseCarouselData[i]['links']} />
   )
 })
 
-const subs =Object.keys(releaseCarousel).map(i => {
+const subs =Object.keys(releaseCarouselData).map(i => {
   return(
-    <span key={releaseCarousel[i]['title']}>{releaseCarousel[i]['title']}</span>
+    <span key={releaseCarouselData[i]['title']}>{releaseCarouselData[i]['title']}</span>
   )
 })
 

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { useRouter } from 'next/router';
 import Header from '../../components/header';
-import releaseCarousel from '../../public/json/releaseCarouselData'
+import releaseCarouselData from '../../public/json/releaseCarouselData'
+//import releaseCarousel from '/json/releaseCarouselData'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faSpotify, faBandcamp, faYoutube, faItunes} from '@fortawesome/free-brands-svg-icons'
 import PlayWidget from 'react-spotify-widgets'
@@ -13,7 +14,7 @@ const fullAlbumPage = (props) => {
     const albumName = router.query.fullAlbumPage;
 
     const iconRef = {"faSpotify": faSpotify, "faBandcamp":faBandcamp, "faYoutube":faYoutube, "faItunes":faItunes}
-    const dataArr = Object.keys(releaseCarousel).map(key => releaseCarousel[key])
+    const dataArr = Object.keys(releaseCarouselData).map(key => releaseCarouselData[key])
 
     for(const item in dataArr){
         if(dataArr[item].title === albumName){
