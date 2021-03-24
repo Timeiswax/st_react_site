@@ -1,23 +1,24 @@
-import React, { Component } from 'react';
-import releaseCarouselData from '../public/json/releaseCarouselData'
+import React, { Component, useState } from 'react';
+//import releaseCarouselData from '../public/json/releaseCarouselData'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faChevronLeft, faChevronRight} from '@fortawesome/free-solid-svg-icons'
 import ReleaseCard from './releaseCard'
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
-const cards = Object.keys(releaseCarouselData).map(i => {
-  return(
-    <ReleaseCard key={releaseCarouselData[i]['title']} pic={releaseCarouselData[i]['pic']} title ={releaseCarouselData[i]['title']} links={releaseCarouselData[i]['links']} />
-  )
-})
+// const cards = Object.keys(releaseCarouselData).map(i => {
+//   return(
+//     <ReleaseCard key={releaseCarouselData[i]['title']} pic={releaseCarouselData[i]['pic']} title ={releaseCarouselData[i]['title']} links={releaseCarouselData[i]['links']} />
+//   )
+// })
 
-const subs =Object.keys(releaseCarouselData).map(i => {
-  return(
-    <span key={releaseCarouselData[i]['title']}>{releaseCarouselData[i]['title']}</span>
-  )
-})
+// const subs =Object.keys(releaseCarouselData).map(i => {
+//   return(
+//     <span key={releaseCarouselData[i]['title']}>{releaseCarouselData[i]['title']}</span>
+//   )
+// })
 
-const length = cards.length;
+// const length = cards.length;
+
 
 class ReleaseCarousel extends Component {
 
@@ -44,8 +45,9 @@ class ReleaseCarousel extends Component {
     })
   }
   
+  
   render() {
-
+    console.log(this.props)
     return (
       <div className="carousel">
         <div className="col">
@@ -61,7 +63,8 @@ class ReleaseCarousel extends Component {
                 timeout={1000}
                 classNames={"car-card"}
                   >
-                    {cards[this.state.index]}
+                    <div></div>
+                    {/* {cards[this.state.index]} */}
                 </CSSTransition>
               </TransitionGroup>
             </div>
@@ -75,6 +78,24 @@ class ReleaseCarousel extends Component {
         </div>
       </div>
     );
+  }
+}
+
+export async function getStaticProps() {
+  // Call an external API endpoint to get posts.
+  // You can use any data fetching library
+  const res = await fetch('../public/json/releaseCarouselData')
+  const sets = await res.json()
+  console.log("shoop")
+  console.log(res)
+
+  // By returning { props: { posts } }, the Blog component
+  // will receive `posts` as a prop at build time
+  return {
+    props: {
+      sets,
+      "se":"ddd"
+    },
   }
 }
 
