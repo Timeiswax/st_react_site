@@ -15,7 +15,7 @@ class Music extends Component {
                         <div className="col">
                             <h1>Music</h1>
                             <div style={{padding: "20px"}}></div>
-                            {/* <ReleaseCarousel /> */}
+                            <ReleaseCarousel />
                         </div>
                 </div> 
             </div>
