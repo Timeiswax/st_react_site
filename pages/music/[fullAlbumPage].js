@@ -34,17 +34,17 @@ const fullAlbumPage = (props) => {
             var links = Object.keys(sc.links).map(i =>{
                 const iconName = sc.links[i]['icon'];
                   return(
-                      <a
-                      key={sc.links[i]['link']} 
-                      className="link-icon" 
-                      href={sc.links[i]['link']} 
-                      style={{
-                          "backgroundColor":sc.links[i]['color'],
-                           "flexGrow":sc.links[i]['fg']}}
-                      >
-                        <FontAwesomeIcon icon={iconRef[iconName]}></FontAwesomeIcon>
-                      </a>
-                    )
+                    <button 
+                    className="link-icon"
+                    style={{
+                        "backgroundColor":sc.links[i]['color'],
+                        "flexGrow":sc.links[i]['fg']}}
+                    key={sc.links[i]['link']} > 
+                        <a href={sc.links[i]['link']} >
+                            <FontAwesomeIcon icon={iconRef[iconName]}></FontAwesomeIcon>
+                        </a>
+                    </button>
+                        )
                 })
         }
     }

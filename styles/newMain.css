@@ -68,6 +68,14 @@ span{
     color: #fdad15;
 }
 
+button{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    display: flex;
+    background-color: none;
+}
+
 
 /* display .overlay when it has the .active class */
 .overlay.active {
@@ -409,8 +417,21 @@ span{
     min-width: 150px;
     box-shadow: 0 2px 5px #2a2a2a;
     margin: 3px;
-    padding: 3px;
+    /* padding: 3px; */
     height: auto;
+}
+
+.link-icon a{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link-icon:hover{
+    opacity: 0.6;
+    transition: all 0.3s ease-in-out;
 }
 
 .album-cta{
