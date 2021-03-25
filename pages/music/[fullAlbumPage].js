@@ -9,6 +9,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 
 
+
 // export async function getStaticPaths() {
 //     const dataArr = Object.keys(releaseCarouselData).map(key => releaseCarouselData[key])
 //     const paths = Object.keys(dataArr).map(release => {
@@ -23,10 +24,20 @@ import Image from 'next/image'
 //   }
 
 const fullAlbumPage = (props) => {
+
+    useEffect(() => {
+        import('react-facebook-pixel')
+          .then(module => module.default)
+          .then(ReactPixel => {
+            ReactPixel.init('509089730085163')
+            ReactPixel.pageView()
+            ReactPixel.trackCustom('ploopy')
+          })
+      }, [])
+
     const router = useRouter();
 
     const albumName = router.query.fullAlbumPage;
-    console.log(typeof albumName)
 
     const iconRef = {"faSpotify": faSpotify, "faBandcamp":faBandcamp, "faYoutube":faYoutube, "faItunes":faItunes}
     const dataArr = Object.keys(releaseCarouselData).map(key => releaseCarouselData[key])
