@@ -25,14 +25,16 @@ import Image from 'next/image'
 
 const fullAlbumPage = (props) => {
 
-    useEffect(() => {
+    function logClick() {
         import('react-facebook-pixel')
           .then(module => module.default)
           .then(ReactPixel => {
             ReactPixel.init('509089730085163')
-            ReactPixel.pageView()
+            ReactPixel.trackCustom('StreamingClick')
           })
-      }, [])
+          console.log("click logged!")
+          
+      }
 
     const router = useRouter();
 
@@ -57,7 +59,7 @@ const fullAlbumPage = (props) => {
                         "backgroundImage":sc.links[i]['color'],
                         "flexGrow":sc.links[i]['fg']}}
                     key={sc.links[i]['link']} 
-                    onClick ={() => ReactPixel.trackCustom('StreamingClick')}
+                    onClick ={logClick}
                     
                     > 
                         <a href={sc.links[i]['link']} >
