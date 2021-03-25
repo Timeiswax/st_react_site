@@ -30,7 +30,7 @@ const fullAlbumPage = (props) => {
           .then(module => module.default)
           .then(ReactPixel => {
             ReactPixel.init('780488376199611')
-            ReactPixel.trackCustom('StreamingClick')
+            ReactPixel.track('Purchase')
           })
           console.log("click logged!")
           
