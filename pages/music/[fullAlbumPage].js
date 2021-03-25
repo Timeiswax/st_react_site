@@ -6,8 +6,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faSpotify, faBandcamp, faYoutube, faItunes} from '@fortawesome/free-brands-svg-icons'
 import PlayWidget from 'react-spotify-widgets'
 import Head from 'next/head'
+import ReactPixel from 'react-facebook-pixel'
+
+ReactPixel.init('509089730085163')
 
 const fullAlbumPage = (props) => {
+    ReactPixel.track('PageView')
     const router = useRouter()
 
     const albumName = router.query.fullAlbumPage;
@@ -53,7 +57,7 @@ const fullAlbumPage = (props) => {
             {/* <Header /> */}
             <div className="album-page">
                 <div className="col">
-                    <h1>Stream Music from Shane Thiede</h1>
+                    <h1>Stream {title} by Shane Thiede</h1>
                     <div className="album-box-1">
                         <h1>{title}</h1>
                         <img src={pic}></img>
