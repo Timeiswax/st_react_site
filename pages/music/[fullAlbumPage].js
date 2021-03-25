@@ -31,7 +31,6 @@ const fullAlbumPage = (props) => {
           .then(ReactPixel => {
             ReactPixel.init('509089730085163')
             ReactPixel.pageView()
-            ReactPixel.trackCustom('ploopy')
           })
       }, [])
 
@@ -58,6 +57,7 @@ const fullAlbumPage = (props) => {
                         "backgroundImage":sc.links[i]['color'],
                         "flexGrow":sc.links[i]['fg']}}
                     key={sc.links[i]['link']} 
+                    onClick ={() => ReactPixel.trackCustom('StreamingClick')}
                     
                     > 
                         <a href={sc.links[i]['link']} >
