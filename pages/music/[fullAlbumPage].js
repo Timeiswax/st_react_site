@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { useRouter } from 'next/router';
 import Header from '../../components/header';
-import releaseCarouselData from '../../json/releaseCarouselData'
+import releaseCarouselData from '../../public/js/releaseCarouselData'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faSpotify, faBandcamp, faYoutube, faItunes} from '@fortawesome/free-brands-svg-icons'
 import PlayWidget from 'react-spotify-widgets'

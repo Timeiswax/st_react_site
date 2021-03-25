@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ReleaseCarouselFCN from '../../components/releaseCarouselFCN'
+import ReleaseCarousel from '../../components/releaseCarousel'
 import Header from '../../components/header'
 
 class Music extends Component {
@@ -15,7 +15,7 @@ class Music extends Component {
                         <div className="col">
                             <h1>Music</h1>
                             <div style={{padding: "20px"}}></div>
-                            <ReleaseCarouselFCN />
+                            <ReleaseCarousel />
                         </div>
                 </div> 
             </div>
