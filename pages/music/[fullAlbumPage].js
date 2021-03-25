@@ -95,7 +95,7 @@ const fullAlbumPage = (props) => {
                     </div>
                     <div className="album-box-2">
                         <PlayWidget
-                            width={380}
+                            width={340}
                             height={250}
                             uri={spotify}
                             lightTheme={false}

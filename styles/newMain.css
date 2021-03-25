@@ -357,7 +357,7 @@ button{
 }
 
 .album-page .col{
-    width: 400px;
+    width: 350px;
     justify-content: flex-start;
 }
 
@@ -371,7 +371,7 @@ button{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 400px;
+    width: 350px;
     height: auto;
     background-color: #fcfcfc;
     border-radius: 8px;
@@ -390,7 +390,7 @@ button{
     margin-top: 20px;
     margin-bottom: 40px;
     height: 300px;
-    width: 400px;
+    width: 350px;
     border-radius: 8px;
     box-shadow: 0 5px 15px #2a2a2a;
 
@@ -404,8 +404,8 @@ button{
 }
 
 .album-page img{
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
     margin-bottom: 10px;
 }
 
