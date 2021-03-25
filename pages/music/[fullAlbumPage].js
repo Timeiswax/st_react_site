@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Header from '../../components/header';
 import releaseCarouselData from '../../public/js/releaseCarouselData'
@@ -6,13 +6,18 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faSpotify, faBandcamp, faYoutube, faItunes} from '@fortawesome/free-brands-svg-icons'
 import PlayWidget from 'react-spotify-widgets'
 import Head from 'next/head'
-import ReactPixel from 'react-facebook-pixel'
-
-ReactPixel.init('509089730085163')
+// import ReactPixel from 'react-facebook-pixel'
 
 const fullAlbumPage = (props) => {
-    ReactPixel.track('PageView')
-    const router = useRouter()
+    const router = useRouter();
+    useEffect(() => {
+        import('react-facebook-pixel')
+          .then(module => module.default)
+          .then(ReactPixel => {
+            ReactPixel.init('509089730085163')
+            ReactPixel.pageView()
+          })
+      }, [])
 
     const albumName = router.query.fullAlbumPage;
 
