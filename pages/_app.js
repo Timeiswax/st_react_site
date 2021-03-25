@@ -1,9 +1,19 @@
 import '../styles/newMain.css'
 import { useRouter } from 'next/router'
 import { CSSTransition, TransitionGroup} from 'react-transition-group'
+import {useEffect} from 'react'
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter()
+
+  useEffect(() => {
+    import('react-facebook-pixel')
+      .then(module => module.default)
+      .then(ReactPixel => {
+        ReactPixel.init('509089730085163')
+        ReactPixel.pageView()
+      })
+  }, [])
 
   return(
     <TransitionGroup>

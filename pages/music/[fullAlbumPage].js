@@ -6,20 +6,27 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faSpotify, faBandcamp, faYoutube, faItunes} from '@fortawesome/free-brands-svg-icons'
 import PlayWidget from 'react-spotify-widgets'
 import Head from 'next/head'
-// import ReactPixel from 'react-facebook-pixel'
+import Image from 'next/image'
+
+
+// export async function getStaticPaths() {
+//     const dataArr = Object.keys(releaseCarouselData).map(key => releaseCarouselData[key])
+//     const paths = Object.keys(dataArr).map(release => {
+//         return {
+//             params: {id: release.toString()},
+//         }
+//     })
+//     return {
+//         paths,
+//         fallback: false,
+//     };
+//   }
 
 const fullAlbumPage = (props) => {
     const router = useRouter();
-    useEffect(() => {
-        import('react-facebook-pixel')
-          .then(module => module.default)
-          .then(ReactPixel => {
-            ReactPixel.init('509089730085163')
-            ReactPixel.pageView()
-          })
-      }, [])
 
     const albumName = router.query.fullAlbumPage;
+    console.log(typeof albumName)
 
     const iconRef = {"faSpotify": faSpotify, "faBandcamp":faBandcamp, "faYoutube":faYoutube, "faItunes":faItunes}
     const dataArr = Object.keys(releaseCarouselData).map(key => releaseCarouselData[key])
@@ -37,9 +44,11 @@ const fullAlbumPage = (props) => {
                     <button 
                     className="link-icon"
                     style={{
-                        "backgroundColor":sc.links[i]['color'],
+                        "backgroundImage":sc.links[i]['color'],
                         "flexGrow":sc.links[i]['fg']}}
-                    key={sc.links[i]['link']} > 
+                    key={sc.links[i]['link']} 
+                    
+                    > 
                         <a href={sc.links[i]['link']} >
                             <FontAwesomeIcon icon={iconRef[iconName]}></FontAwesomeIcon>
                         </a>
@@ -65,7 +74,7 @@ const fullAlbumPage = (props) => {
                     <h1>Stream {title} by Shane Thiede</h1>
                     <div className="album-box-1">
                         <h1>{title}</h1>
-                        <img src={pic}></img>
+                        <img src={pic} height={400} width={400} />
                         <h4 className="album-cta">Listen:</h4>
                         <div className="sub-box wrap-row">
                             {links}
