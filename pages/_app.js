@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps }) {
     import('react-facebook-pixel')
       .then(module => module.default)
       .then(ReactPixel => {
-        ReactPixel.init('456264005821911')
+        ReactPixel.init('780488376199611')
         ReactPixel.pageView()
       })
   }, [])
