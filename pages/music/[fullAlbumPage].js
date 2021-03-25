@@ -29,7 +29,7 @@ const fullAlbumPage = (props) => {
         import('react-facebook-pixel')
           .then(module => module.default)
           .then(ReactPixel => {
-            ReactPixel.init('509089730085163')
+            ReactPixel.init('456264005821911')
             ReactPixel.trackCustom('StreamingClick')
           })
           console.log("click logged!")
