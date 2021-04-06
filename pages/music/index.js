@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ReleaseCarousel from '../../components/releaseCarousel'
+import ReleaseSlider from '../../components/releaseSlider'
 import Header from '../../components/header'
 
 class Music extends Component {
@@ -11,12 +11,10 @@ class Music extends Component {
         return (
             <div>
                 <Header />
-                <div className="full-page music">  
-                        <div className="col">
-                            <h1>Music</h1>
-                            <div style={{padding: "20px"}}></div>
-                            <ReleaseCarousel />
-                        </div>
+                <div className="music-page">  
+                    <div>
+                        <ReleaseSlider />
+                    </div>
                 </div> 
             </div>
     );

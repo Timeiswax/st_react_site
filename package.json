@@ -13,6 +13,7 @@
     "@fortawesome/free-regular-svg-icons": "^5.15.3",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",
+    "@react-hook/window-size": "^3.0.7",
     "color.js": "^1.2.0",
     "json-loader": "^0.5.7",
     "next": "10.0.9",

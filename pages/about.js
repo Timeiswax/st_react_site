@@ -10,9 +10,9 @@ class About extends Component {
     render() { 
         return (
             <div>
-                {/* <Header /> */}
-                <div className="full-page">
-                    <div className="col paraCol">
+                <Header />
+                <div className="about-page">
+                    <div className="paraCol">
                 
                         <h1>About</h1>
                         <p><span>Depending on when you ask him,</span> Shane’s Dad will tell you that the Detroit, Michigan based Shane Thiede has been holding drumsticks in his hands since anywhere from 4 days to 4 weeks old. Any way you slice it, he started pretty early on. Shane’s Dad, a drummer himself, started Shane down the path that eventually lead him to pick up bass in college, which lead him to pick up guitar, which lead him to pick up keys, which lead him to writing songs…</p>

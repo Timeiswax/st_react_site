@@ -1,21 +1,49 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import Link from 'next/link'
 import Image from 'next/image'
+import {useWindowWidth} from '@react-hook/window-size'
+import {CSSTransition} from 'react-transition-group'
+
+
 
 const Header = () => {
+    const [showOverlay, setOverlay] = useState(false);
+    const onlyWidth = useWindowWidth()
+    // console.log(onlyWidth)
+    if(onlyWidth > 768){
     return (
         <div>
-        <nav className="header-row">
-            <Image id="logo" src={"/svg/NEWDOTLOGO.svg"} height={50} width={100}/>
-            <div id="header-nav" className="header-links">
-                <Link href="/music" className="p-2">Music</Link>
-                <Link href="/" className="p-2">Home</Link>
-                <Link href="/about" className="p-2">About</Link>
-                <Link href="/gallery" className="p-2">Gallery</Link>
-                <Link href="/links" className="p-2">Links</Link>
-                <Link href="/contact" className="p-2">Contact</Link>   
-            </div>
-        </nav>
+            <nav className="header-row">
+                <Image id="logoe" src={"/svg/NEWDOTLOGO.svg"} height={50} width={100}/>
+                <div id="header-nav" className="header-links">
+                    <Link href="/music" className="p-2">Music</Link>
+                    <Link href="/" className="p-2">Home</Link>
+                    <Link href="/about" className="p-2">About</Link>
+                    <Link href="/gallery" className="p-2">Gallery</Link>
+                    <Link href="/links" className="p-2">Links</Link>
+                    <Link href="/contact" className="p-2">Contact</Link>   
+                </div>
+            </nav>
+        </div>
+        )} else {
+            return (
+                <nav>
+                    <div className="mobile-row">
+                        <button onClick={() => setOverlay(!showOverlay)}><Image id="logoe" src={"/svg/NEWDOTLOGO.svg"} height={50} width={100}/></button>
+                        <CSSTransition
+                            in={showOverlay}
+                            timeout={1000}
+                            classNames={"header-trans"}
+                        >
+                            <div>
+                                <h1>ITS SHOWIN</h1>
+                                </div>
+                        </CSSTransition>
+                    </div>
+                </nav>
+            )
+        }
+    }
     
         {/* <nav className="d-block d-md-none navbar">
             <button id="navButton" className="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbar"
@@ -48,10 +76,7 @@ const Header = () => {
 
         </nav>
 
-        <div className="overlay"></div> */}
-    </div>
-
-      );
-}
+<div className="overlay"></div> */}
+    
  
 export default Header;

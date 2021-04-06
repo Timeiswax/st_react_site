@@ -44,7 +44,7 @@ const fullAlbumPage = (props) => {
     const dataArr = Object.keys(releaseCarouselData).map(key => releaseCarouselData[key])
 
     for(const item in dataArr){
-        if(dataArr[item].title === albumName){
+        if(dataArr[item].url === albumName){
             const sc = dataArr[item];
             var title = sc.title
             var pic = sc.pic;

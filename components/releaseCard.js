@@ -10,7 +10,8 @@ function ReleaseCard(props) {
   const links = Object.keys(props.links).map(i =>{
     const iconName = props.links[i]['icon'];
     return(
-        <a href={props.links[i]['link']} 
+        <a href={props.links[i]['link']}
+        key={props.links[i]['link']} 
         style={{"backgroundColor":props.links[i]['color']}}
         onMouseOver={()=>setCta(props.links[i].text)}
         >
@@ -26,7 +27,7 @@ function ReleaseCard(props) {
         <div className="col">
           <div className="card-thang">
             <h3 className="car-card-title">{props.title}</h3>
-            <Link href={`/music/${props.title}`} passHref={true}>
+            <Link href={`/music/${props.url}`} passHref={true}>
               <img src={props.pic} alt="Shane Thiede" />
             </Link>
           </div>
