@@ -18,7 +18,9 @@ function MyApp({ Component, pageProps }) {
         trackingId: 'UA-149635073-1'
       })
     ]
-})
+  })
+
+  analytics.page()
 
   // useEffect(() => {
   //   import('react-facebook-pixel')
