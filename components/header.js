@@ -3,6 +3,8 @@ import Link from 'next/link'
 import Image from 'next/image'
 import {useWindowWidth} from '@react-hook/window-size'
 import {CSSTransition} from 'react-transition-group'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faBars} from '@fortawesome/free-solid-svg-icons'
 
 
 
@@ -15,13 +17,14 @@ const Header = () => {
         <div>
             <nav className="header-row">
                 <Image id="logoe" src={"/svg/NEWDOTLOGO.svg"} height={50} width={100}/>
+                
                 <div id="header-nav" className="header-links">
-                    <Link href="/music" className="p-2">Music</Link>
-                    <Link href="/" className="p-2">Home</Link>
-                    <Link href="/about" className="p-2">About</Link>
-                    <Link href="/gallery" className="p-2">Gallery</Link>
-                    <Link href="/links" className="p-2">Links</Link>
-                    <Link href="/contact" className="p-2">Contact</Link>   
+                    <Link href="/music" >Music</Link>
+                    <Link href="/" >Home</Link>
+                    <Link href="/about" >About</Link>
+                    <Link href="/gallery" >Gallery</Link>
+                    <Link href="/links" >Links</Link>
+                    <Link href="/contact" >Contact</Link>   
                 </div>
             </nav>
         </div>
@@ -29,15 +32,28 @@ const Header = () => {
             return (
                 <nav>
                     <div className="mobile-row">
-                        <button onClick={() => setOverlay(!showOverlay)}><Image id="logoe" src={"/svg/NEWDOTLOGO.svg"} height={50} width={100}/></button>
+                    <FontAwesomeIcon onClick={() => setOverlay(!showOverlay)} icon={faBars}></FontAwesomeIcon>
+                        {/* <button className="button-nav" onClick={() => setOverlay(!showOverlay)}><Image id="logo" src={"/svg/NEWDOTLOGO.svg"} height={50} width={100}/></button> */}
                         <CSSTransition
                             in={showOverlay}
                             timeout={1000}
+                            unmountOnExit
                             classNames={"header-trans"}
                         >
-                            <div>
-                                <h1>ITS SHOWIN</h1>
+                            <div className="nav-overlay-mobile"> 
+                                
+                                <div className="col header-links">
+                                    <FontAwesomeIcon onClick={() => setOverlay(!showOverlay)} icon={faBars}></FontAwesomeIcon>
+
+                                    {/* <button className="button-nav" onClick={() => setOverlay(!showOverlay)}><Image id="logo" src={"/svg/NEWDOTLOGO.svg"} height={50} width={100}/></button> */}
+                                    <Link href="/music" >Music</Link>
+                                    <Link href="/" >Home</Link>
+                                    <Link href="/about" >About</Link>
+                                    <Link href="/gallery" >Gallery</Link>
+                                    <Link href="/links" >Links</Link>
+                                    <Link href="/contact" >Contact</Link>  
                                 </div>
+                            </div>
                         </CSSTransition>
                     </div>
                 </nav>

@@ -3,17 +3,31 @@ import { useRouter } from 'next/router'
 import { CSSTransition, TransitionGroup} from 'react-transition-group'
 import {useEffect} from 'react'
 
+import Analytics from 'analytics'
+import googleAnalytics from '@analytics/google-analytics'
+
 function MyApp({ Component, pageProps }) {
   const router = useRouter()
 
-  useEffect(() => {
-    import('react-facebook-pixel')
-      .then(module => module.default)
-      .then(ReactPixel => {
-        ReactPixel.init('780488376199611')
-        ReactPixel.pageView()
+
+  
+  const analytics = Analytics({
+    app: 'awesome-app',
+    plugins: [
+      googleAnalytics({
+        trackingId: 'UA-149635073-1'
       })
-  }, [])
+    ]
+})
+
+  // useEffect(() => {
+  //   import('react-facebook-pixel')
+  //     .then(module => module.default)
+  //     .then(ReactPixel => {
+  //       ReactPixel.init('780488376199611')
+  //       ReactPixel.pageView()
+  //     })
+  // }, [])
 
   return(
     <TransitionGroup>

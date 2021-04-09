@@ -70,16 +70,38 @@ span{
 }
 
 button{
+    border-width: 0;
+}
+
+.button-nav{
     padding: 0;
     margin: 0;
     border: 0;
+    height: 50px;
     display: flex;
-    background-color: #ffffff;
+    background-color: rgba(0,0,0,0);
 }
 
 
 /* display .overlay when it has the .active class */
-.overlay.active {
+.nav-overlay {
+    background-color: green;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    opacity: 1;
+}
+
+.nav-overlay-mobile {
+    background-color: green;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
     display: flex;
     opacity: 1;
 }
@@ -743,16 +765,23 @@ button{
 
 .header-trans-enter{
     opacity: 0;
+    left: -100vw;
 }
 .header-trans-enter-active{
     opacity: 1;
+    left: 0;
     transition: all 0.3s ease-in-out;
 }
 .header-trans-exit{
     opacity: 1;
+    left: 0;
 }
 .header-trans-exit-active{
     opacity: 0;
+    left: -100vw;
     transition: all 0.3s ease-in-out;
-
+}
+.header-trans-exit-done{
+    display: none;
+    color: red;
 }
