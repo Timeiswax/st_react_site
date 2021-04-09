@@ -84,7 +84,7 @@ const fullAlbumPage = (props) => {
             {/* <Header /> */}
             <div className="album-page">
                 <div className="col">
-                    <h1>Stream {title} by Shane Thiede</h1>
+                    <h1 style={{margin:"30px"}}>Stream {title} by Shane Thiede</h1>
                     <div className="album-box-1">
                         <h1>{title}</h1>
                         <img src={pic} height={400} width={400} />

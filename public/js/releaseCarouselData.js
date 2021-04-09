@@ -81,22 +81,22 @@ const releaseCarouselData = {
         "links":{
             "spotify": {
                 "text": "Listen on Spotify",
-                "link":"https://open.spotify.com/track/6g3xVGuwW25HwUnMW9z0fp?si=L8lSXVeSRZGqxlCBBCTdPg",
+                "link":"https://open.spotify.com/track/6OlFON2jHQCsyHZWMuT2le?si=lqVfoX5CR6uLX6XXSHq2KA",
                 "icon":"faSpotify",
                 "color": "linear-gradient(135deg, #1db954 50%, #191414 180%)",
                 "fg": 4,
-                "uri":"spotify:track:6g3xVGuwW25HwUnMW9z0fp"
+                "uri":"spotify:track:6OlFON2jHQCsyHZWMuT2le"
             },
             "youtube": {
                 "text": "Watch on YouTube",
-                "link": "https://www.youtube.com/watch?v=TJuPnVjyFo0",
+                "link": "https://www.youtube.com/watch?v=wxVFoUAlDKw",
                 "icon": "faYoutube",
                 "color": "linear-gradient(135deg, #FF0000 50%, #550000 180%)",
                 "fg": 2
             },
             "appleMusic": {
                 "text": "Listen on Apple Music",
-                "link": "https://music.apple.com/us/album/setup/1556557269?i=1556557270",
+                "link": "https://music.apple.com/us/album/payoff/1556797439?i=1556797440",
                 "icon": "faItunes",
                 "color": "linear-gradient(-45deg, #35C3F3 0%, #8b9fe8 20%, #e681d8 39%, #ffa9a4 76%, #FED2CE 100%)",
                 "fg": 1
@@ -107,7 +107,7 @@ const releaseCarouselData = {
                 "link": "https://shanethiede.bandcamp.com/releases",
                 "icon": "faBandcamp",
                 "color": "linear-gradient(135deg, #1ca1c2 70%, #000055 170%)",
-                "fg": 1
+                "fg": 2
             }
         }
 
