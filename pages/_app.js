@@ -38,8 +38,8 @@ function MyApp({ Component, pageProps }) {
       key={router.pathname}
       timeout={1000}
       classNames={"fullPageTransition"}
-      >
-        <Component {...pageProps} />
+    >
+          <Component {...pageProps} />
       </CSSTransition>
     </TransitionGroup>
   )
