@@ -11,6 +11,7 @@ const contact = () => {
                     <p>Just shoot me an email at:</p>
                     <a style={{fontSize:"30px"}} href="mailto:shane@shanethiede.com">shane@shanethiede.com</a>
                     <img className="contact-pic" src="/jpg/000665040028.jpg" alt="me"></img>
+                    <p>(Also I operate as Harmony Media, LLC for more formal business stuff)</p>
                 </div>
             </div>
 
