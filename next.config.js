@@ -3,7 +3,7 @@ module.exports = {
       return [
         {
           source: '/presave',
-          destination: 'https://show.co/MKbrBU9',
+          destination: 'https://distrokid.com/hyperfollow/omisani/spectre-001-sequence-1'          ,
           permanent: false,
         },
         {
