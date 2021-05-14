@@ -1,6 +1,11 @@
 const linksData = [
     {
-        text: "Purchase Music on Bandcamp",
+        text: "Listen to Omisani on Spotify",
+        link: "https://open.spotify.com/album/4NFusRtrCZws5FPFKcviT5?si=sNtfQoT9QqeCD_EwcfJSzg",
+        color: "orange"
+    },
+    {
+        text: "Purchase on Bandcamp",
         link: "bandcamp.com/shanethiede",
         color: "#1ca1c2"
     },

@@ -21,10 +21,10 @@ const Links = () => {
     return ( 
         <div>
             <Header />
-            <div className="full-page">
+            <div className="full-page links-page">
                 <div className="col" >
                     <h1>Links</h1>
-                    <div className="row links-row">
+                    <div className="col links-row">
                         {linkButtons}
                     </div>
                 </div>
